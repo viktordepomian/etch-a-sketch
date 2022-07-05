@@ -1,4 +1,4 @@
 # etch-a-sketch
 
-It's a 16x16 grid you can paint on.
-Change the color and bottom or reset the canvas
+It's a 16x16 grid you can paint on.<br />
+Change the color at the bottom or reset the canvas.
