@@ -1,5 +1,7 @@
 const container = document.querySelector('.container');
-const squaresInput = prompt('Please input how many squares(e.g. 16, 32, 64) Max: 100.');
+const resetBtn = document.querySelector('.reset-btn');
+const colorPicker = document.querySelector('.color-picker');
+let amountOfRowsCols = 16;
 
 function makeRowsYo(rows, cols){
     container.style.setProperty('--grid-rows', rows);
@@ -12,10 +14,13 @@ function makeRowsYo(rows, cols){
             makeSquareColored();
         });
         function makeSquareColored(){
-            newSquare.classList.toggle('coloredSquare')   ;
+            newSquare.style.backgroundColor = colorPicker.value;
         }
+
+        resetBtn.addEventListener('click', () => {
+            newSquare.style.backgroundColor = 'white';
+        });
     };
 };
 
-
-makeRowsYo(squaresInput, squaresInput);
+makeRowsYo(amountOfRowsCols, amountOfRowsCols);

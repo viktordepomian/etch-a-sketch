@@ -1,4 +1,4 @@
-:root{
+:root {
     --grid-cols: 1;
     --grid-rows: 1;
 }
@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .container {
@@ -26,11 +27,34 @@ body {
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
-.squareStyle:hover{
-    background-color: black;
-    cursor: pointer;
+.etc-area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
-.coloredSquare{
+.reset-btn {
+    padding: .5rem;
+    border-radius: 0;
+    border: 0;
+    background-color: #c2c2c2;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.reset-btn:hover {
+    background-color: #969696;
+}
+
+.squareStyle {
+    cursor: url(img/pencil-icon.png) 2 30, auto;
+}
+
+.squareStyle:hover {
     background-color: black;
+
+}
+
+.coloredSquare {
+    background-color: rgba(0, 0, 0, 1);
 }
